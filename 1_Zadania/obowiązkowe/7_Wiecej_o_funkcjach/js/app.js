@@ -5,28 +5,29 @@
  */
 
 
-//Twoj komentarz ...
+//Funkcja zewnętrzna
 function jeden() {
 
-    //Twoj komentarz ...
+    // Zmienna dostępna w całej funkcji jeden
     var zmienna1 = 1;
 
-    //Twoj komentarz ...
+    // Funkcja wewnętrzna
     function dwa() {
 
-        //Twoj komentarz ...
+        // 1 - Dostępne poniewaz dwa() jest wewnątrz jeden()
         console.log(zmienna1);
 
-        //Twoj komentarz ...
+        // Zmienna dostępna tylko wewnątrz dwa() 
         var zmienna2 = 3;
     }
 
-    //Twoj komentarz ...
+    // console.log(1)
     dwa();
 
-    //Twoj komentarz ...
+    // undefined - z zewnątrz funkcji dwa() nie ma dostępu do zmienna2
     console.log(zmienna2)
 }
 
-//Twoj komentarz ...
+// Console.log(1) - wywołane z wewnątrz funckji jeden ma dostęp do zmienna1
+// Natomiast gdybyśmy spróbowali "console.log(zmienna1)" to dostaniemy undefined
 jeden()

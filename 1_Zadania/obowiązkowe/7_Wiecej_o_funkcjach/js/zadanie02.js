@@ -10,5 +10,17 @@ callOtherFunction(function (a, b) {
     console.log("Pierwsza liczba:", a);
     console.log("Druga liczba", b)
     console.log("Wynik", a + b)
+});
+
+callOtherFunction(function(a,b) {
+    console.log(Math.max(a,b));
+});
+
+callOtherFunction(function(a) {
+    console.log("Tylko a nas interesuje", a);
+});
+
+callOtherFunction(function(a,b){
+    console.log(a < b);
 })
 
