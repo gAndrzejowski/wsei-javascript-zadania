@@ -55,8 +55,34 @@ for (let counter1 = 0; counter1 < task2Array.length; counter1++) {
 // Zadanie 3
 
 const print2DArray = (tablica2D) => {
-    const splaszczone = tablica2D.reduce((acc, rzad) => {
-        acc.concat(rzad);
+    const splaszczone = tablica2D.reduce((acc,rzad) => {
+        return acc.concat(rzad);
     });
     splaszczone.forEach(element => console.log(element));
 };
+
+print2DArray([[1,2],[3,4]]);
+
+// Zadanie 4
+
+const array_2d = [[1,2,3], [4,5,6]];
+print2DArray(array_2d);
+
+// Zadanie 5
+
+const create2DArray = (rows, columns) => {
+    const getNumberInCell = (rowIndex, colIndex) => {
+        return rowIndex * columns + colIndex + 1;
+    }
+    const array2D = [];
+    for (let rowIndex = 0; rowIndex < rows; rowIndex++) {
+        const row = [];
+        for (let colIndex = 0; colIndex < columns; colIndex++) {
+            row.push(getNumberInCell(rowIndex, colIndex));
+        }
+        array2D.push(row);
+    }
+    return array2D;
+}
+
+console.log(create2DArray(4,4));
