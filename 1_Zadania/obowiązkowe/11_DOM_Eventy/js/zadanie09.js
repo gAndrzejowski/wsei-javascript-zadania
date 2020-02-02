@@ -25,4 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 
-})
+});
+
+// Kilka możliwości:
+// a) var that=this na zewnątrz innerFuncOne i odwołać się do that zamiast this
+// b) zmienić innerFuncOne na funkcję strzałkową 
+//  (wówczas this będzie się odnosiło do kontekstu zdefiniowania funkcji)
+// c) użycie bind, call lub apply 
